@@ -1,0 +1,22 @@
+@import "./../../assets/colors.scss";
+
+.user {
+  background-color: $backgroundUser;
+  padding: 5px 20px;
+  margin: 20px auto;
+  cursor: pointer;
+  border: solid 2px #a5a16f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__count {
+  background-color: $backgroundUserCount;
+  padding: 20px;
+  border-radius: 50px;
+  width: 20px;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+@import "./../../assets/colors.scss";
+
+.menu-item {
+  margin-left: 10px;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px;
+  color: $link;
+}

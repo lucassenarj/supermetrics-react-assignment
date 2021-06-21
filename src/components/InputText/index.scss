@@ -1,0 +1,36 @@
+@import "./../../assets/colors.scss";
+
+.input-text__label {
+  font-size: 18px;
+}
+
+.input-text__formControl {
+  display: flex;
+  width: 100%;
+  margin: 5px 0 20px;
+}
+
+.input-text__formControl__input {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px $gray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline: none;
+}
+
+.input-text__formControl__input:focus {
+  border: solid 1px $dark-gray;
+}
+
+.input-text__formControl__input::placeholder {
+  color: $gray;
+}
+
+.input-text__formControl span {
+  padding: 10px;
+  background: $gray;
+  color: $white;
+  min-width: 30px;
+  text-align: center;
+}

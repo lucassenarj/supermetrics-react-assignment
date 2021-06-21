@@ -1,0 +1,62 @@
+@import "./../../assets/colors.scss";
+
+.login {
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0px 30px;
+}
+
+.login__form {
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 600px) {
+  .login__form {
+    min-width: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .login__form {
+    min-width: 750px;
+  }
+}
+
+.login__form__heading h2 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0px auto 30px;
+  color: $text;
+}
+
+.login__form__fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login__form__button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login__form__button__btn {
+  padding: 15px 35px;
+  border-radius: 5px;
+  border: solid 1px azure;
+  background-color: $button;
+  color: azure;
+  cursor: pointer;
+}
+
+.login__form__button__btn:hover {
+  background-color: $button__hover;
+}

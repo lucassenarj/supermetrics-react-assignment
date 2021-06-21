@@ -1,0 +1,23 @@
+@import "./../../assets/colors.scss";
+
+.articles__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles__buttons {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles__buttons__btn {
+  padding: 10px 20px;
+  background-color: $button;
+  cursor: pointer;
+}
+
+.articles__buttons__btn:hover {
+  background-color: $button__hover;
+}
