@@ -8,9 +8,9 @@ const initialState = {
   loading: false,
   error: false,
   expiration: 0,
-  sl_token: "",
-  email: "",
-  name: "",
+  sl_token: null,
+  email: null,
+  name: null,
 };
 
 const users = (state = initialState, action) => {
@@ -31,7 +31,6 @@ const users = (state = initialState, action) => {
     }
     case APP_SIGN_IN_SUCCESS: {
       const data = action.payload;
-      console.log(data);
       return {
         ...state,
         loading: false,
