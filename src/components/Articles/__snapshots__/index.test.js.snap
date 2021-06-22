@@ -92,7 +92,7 @@ exports[`Components Articles renders correctly 1`] = `
       class="article__header"
     >
       <p>
-        June 14, 2021, 05:33:13
+        June 14, 2021, 04:33:13
       </p>
     </div>
     <div
@@ -108,7 +108,7 @@ exports[`Components Articles renders correctly 1`] = `
       class="article__header"
     >
       <p>
-        June 8, 2021, 17:27:02
+        June 8, 2021, 16:27:02
       </p>
     </div>
     <div
@@ -124,7 +124,7 @@ exports[`Components Articles renders correctly 1`] = `
       class="article__header"
     >
       <p>
-        June 1, 2021, 23:15:33
+        June 1, 2021, 22:15:33
       </p>
     </div>
     <div
