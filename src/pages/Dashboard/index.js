@@ -3,14 +3,24 @@ import Articles from "./../../components/Articles";
 import Aside from "./../../components/Aside";
 import Layout from "./../../components/Layout";
 import Loader from "./../../components/Loader";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getArticles } from "./../../store/actions";
+import { verifyToken } from "./../../utils/helpers";
 import "./index.scss";
 
 function Dashboard() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { loading, users } = useSelector(store => store.users);
-  const { sl_token } = useSelector(store => store.app);
+  const { sl_token, expiration } = useSelector(store => store.app);
+
+  useEffect(() => {
+    const isValid = verifyToken(sl_token, expiration);
+    if(!isValid) {
+      history.push("/");
+    }
+  }, [expiration, history, sl_token]);
 
   useEffect(() => {
     if(users.length === 0) {
