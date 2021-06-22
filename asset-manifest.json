@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/supermetrics-react-assignment/static/css/main.d651cec1.chunk.css",
+    "main.js": "/supermetrics-react-assignment/static/js/main.a7430f52.chunk.js",
+    "main.js.map": "/supermetrics-react-assignment/static/js/main.a7430f52.chunk.js.map",
+    "runtime-main.js": "/supermetrics-react-assignment/static/js/runtime-main.11b50674.js",
+    "runtime-main.js.map": "/supermetrics-react-assignment/static/js/runtime-main.11b50674.js.map",
+    "static/js/2.0b33559e.chunk.js": "/supermetrics-react-assignment/static/js/2.0b33559e.chunk.js",
+    "static/js/2.0b33559e.chunk.js.map": "/supermetrics-react-assignment/static/js/2.0b33559e.chunk.js.map",
+    "index.html": "/supermetrics-react-assignment/index.html",
+    "static/css/main.d651cec1.chunk.css.map": "/supermetrics-react-assignment/static/css/main.d651cec1.chunk.css.map",
+    "static/js/2.0b33559e.chunk.js.LICENSE.txt": "/supermetrics-react-assignment/static/js/2.0b33559e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11b50674.js",
+    "static/js/2.0b33559e.chunk.js",
+    "static/css/main.d651cec1.chunk.css",
+    "static/js/main.a7430f52.chunk.js"
+  ]
+}
