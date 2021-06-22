@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    container_name: supermetrics-react-assignment
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8086:3000'
+    environment:
+      - NODE_ENV=development
