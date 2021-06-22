@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# supermetrics-react-assingment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project developed following requirements from [Supermetrics](https://github.com/supermetrics-public/react-assignment)
 
-## Available Scripts
+---
+## Assignment
 
-In the project directory, you can run:
+Create a post-view app reader using React that provides a login page for the user and a dashboard to display the posts. Using CSS toolkits and UI frameworks (bootstrap etc) is not allowed.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Required features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [x] Login Screen with email and name inputs.
+* [x] Sender list with sender name and post count ordered by name alphabetically.
+* [x] Clicking on a sender opens that sender's posts in the post list view.
+* [x] Post list where posts are ordered by creation time.
+* [x] Post order buttons to allow choosing most recent first and most recent last ordering for posts list
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Extra features (in progress)
+* [ ] Search box for senders
+* [ ] Searchbox for posts
+* [ ] Deep-linkable post list
+* [x] Dockerfile and docker-compose
+* [x] Deployed [Visit app here](https://lucassenarj.github.io/supermetrics-react-assignment/)
+* [x] Github actions tests
+* [x] Automated release versions
+* [ ] Installable on desktop
+* [ ] Posts available offline
+* [ ] End2end tests
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `git clone https://github.com/lucassenarj/supermetrics-react-assignment`
+- `cd supermetrics-react-assignment`
+- `yarn install` or `npm install`
+- `yarn start` or `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `yarn test` or `npm test`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Test coverage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img  src="./docs/test-1.png"/>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img  src="./docs/test-2.png"/>
