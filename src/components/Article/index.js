@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { formatDate } from "./../../utils/helpers";
 import "./index.scss";
 
@@ -13,6 +14,11 @@ function Article({date, message}) {
       </div>
     </article>
   )
+};
+
+Article.propTypes = {
+  date: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
 export default Article;

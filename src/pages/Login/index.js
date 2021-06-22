@@ -19,7 +19,6 @@ function Login() {
 
   useEffect(() => {
     const isValid = verifyToken(sl_token, expiration);
-    console.log(isValid);
     if(isValid) {
       history.push("/dashboard");
     }

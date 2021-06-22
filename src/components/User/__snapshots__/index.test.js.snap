@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components User renders correctly 1`] = `
+<button
+  class="user"
+>
+  <p>
+    User test
+     
+  </p>
+  <p
+    class="user__count"
+  >
+    3
+  </p>
+</button>
+`;

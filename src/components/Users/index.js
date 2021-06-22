@@ -14,6 +14,7 @@ function Users() {
           name={user.user_name}
           posts={user.posts.length}
           key={user.user_id}
+          id={user.user_id}
           onClick={() => dispatch(setArticleList(user.posts))}
         />
       ))}

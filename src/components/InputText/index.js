@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./index.scss";
 
 function InputText({
@@ -29,5 +30,15 @@ function InputText({
     </div>
   );
 };
+
+InputText.propTypes = {
+  icon: PropTypes.element.isRequired,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string,
+}
 
 export default InputText;

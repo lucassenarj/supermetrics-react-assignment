@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Article renders correctly 1`] = `
+<article>
+  <div
+    class="article__header"
+  >
+    <p>
+      June 8, 2021, 17:27:02
+    </p>
+  </div>
+  <div
+    class="article__content"
+  >
+    <p>
+      Some cool messages
+    </p>
+  </div>
+</article>
+`;

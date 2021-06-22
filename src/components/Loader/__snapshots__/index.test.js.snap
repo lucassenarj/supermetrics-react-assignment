@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Loader renders correctly 1`] = `
+<div
+  class="loader"
+>
+  <div
+    class="loader__spinner"
+  />
+</div>
+`;

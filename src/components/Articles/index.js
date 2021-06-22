@@ -25,6 +25,7 @@ function Articles() {
             className="articles__buttons__btn"
             type="button"
             title="Most recent"
+            data-testid="order-asc"
           >
             <FaArrowUp />
           </button>
@@ -34,6 +35,7 @@ function Articles() {
             className="articles__buttons__btn"
             type="button"
             tytle="Oldest"
+            data-testid="order-desc"
           >
             <FaArrowDown />
           </button>

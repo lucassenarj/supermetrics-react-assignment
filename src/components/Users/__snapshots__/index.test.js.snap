@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Users renders correctly 1`] = `
+<div>
+  <button
+    class="user"
+    data-testid="user_4"
+  >
+    <p>
+      Britany Heise
+       
+    </p>
+    <p
+      class="user__count"
+    >
+      9
+    </p>
+  </button>
+  <button
+    class="user"
+    data-testid="user_6"
+  >
+    <p>
+      Carly Alvarez
+       
+    </p>
+    <p
+      class="user__count"
+    >
+      3
+    </p>
+  </button>
+</div>
+`;
