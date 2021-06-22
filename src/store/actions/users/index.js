@@ -6,22 +6,19 @@ export const USERS_GET_ARTICLES_ERROR = "USERS_GET_ARTICLES_ERROR";
 export const USERS_GET_ARTICLES_REQUEST = "USERS_GET_ARTICLES_REQUEST";
 export const USERS_GET_ARTICLES_SUCCESS = "USERS_GET_ARTICLES_SUCCESS";
 
-export function getArticles() {
-  return async (dispatch, getState) => {
+export function getArticles(sl_token) {
+  return async (dispatch) => {
     try {
       dispatch({
         type: USERS_GET_ARTICLES_REQUEST,
       });
 
-      const { app: { sl_token } } = getState();
-
       const response = await api.get(`/posts?sl_token=${sl_token}`);
 
       if (response.status === 200) {
         const data = groupPostByUsers(response.data.data.posts);
-        console.log(data);
 
-        setArticleList(data[0].posts);
+        dispatch(setArticleList(data[0].posts));
   
         dispatch({
           type: USERS_GET_ARTICLES_SUCCESS,

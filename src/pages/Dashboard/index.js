@@ -10,12 +10,13 @@ import "./index.scss";
 function Dashboard() {
   const dispatch = useDispatch();
   const { loading, users } = useSelector(store => store.users);
+  const { sl_token } = useSelector(store => store.app);
 
   useEffect(() => {
     if(users.length === 0) {
-      dispatch(getArticles());
+      dispatch(getArticles(sl_token));
     }
-  }, [dispatch, users]);
+  }, [dispatch, users, sl_token]);
   return (
     <React.Fragment>
       { loading ? <Loader /> :

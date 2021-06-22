@@ -18,7 +18,6 @@ export function signIn(name, email) {
       };
 
       const response = await api.post("/register", body);
-      console.log(response);
       if (response.status === 200) {
         const currentDate = new Date();
         currentDate.setHours(currentDate.getHours() + 1);
