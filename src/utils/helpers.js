@@ -38,7 +38,7 @@ export function sortPostsByParameter(posts, parameter = "ASC") {
 }
 
 export function verifyToken(token, expiration) {
-  if (token.length === 0) {
+  if (!token || token.length === 0) {
     return false;
   }
 
