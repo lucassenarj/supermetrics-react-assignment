@@ -51,6 +51,29 @@
     "redux-mock-store": "^1.5.4"
   },
   "jest": {
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": ["json", "html"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "src/**/*.spec.js",
+      "src/**/index.js",
+      "!src/**/types.js",
+      "!src/**/tests/",
+      "!src/**/__snapshots__/",
+      "!<rootDir>/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/index.js",
+      "src/setupTests.js",
+      "src/store/index.js",
+      "src/store/actions/index.js",
+      "src/utils/mocks/articles.js",
+      "src/utils/mocks/login.js",
+      "src/utils/mocks/posts.js",
+      "src/utils/mocks/users.js",
+      "src/pages/About/index.js",
+      "src/pages/Contact/index.js",
+      "src/pages/Dashboard/index.js",
+      "src/pages/Login/index.js"
+    ]
   }
 }
