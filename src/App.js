@@ -12,7 +12,7 @@ function App(){
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/supermetrics-react-assignment/">
+        <BrowserRouter basename="/supermetrics-react-assignment/" forceRefresh={true}>
           <Switch>
             <Route path="/" exact={true} component={Login} />
             <Route path="/dashboard" component={Dashboard} />
