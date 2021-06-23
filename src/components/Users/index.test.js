@@ -24,7 +24,7 @@ describe("Components", () => {
 
       wrapper = render(
         <redux.Provider store={store}>
-          <Users />
+          <Users users={users} />
         </redux.Provider>
       );
     });

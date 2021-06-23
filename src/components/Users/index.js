@@ -1,15 +1,15 @@
 import React from "react";
 import User from "../User";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setArticleList } from "./../../store/actions";
 import "./index.scss";
 
-function Users() {
+function Users({ users }) {
   const dispatch = useDispatch();
-  const { users } = useSelector(state => state.users);
   return (
     <div>
-      { users.map((user) => (
+      { users.length === 0 ? (<p>No user founded!</p>) : 
+        users.map((user) => (
         <User
           name={user.user_name}
           posts={user.posts.length}

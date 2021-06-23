@@ -28,7 +28,7 @@ exports[`Components Aside renders correctly 1`] = `
       <input
         class="input-text__formControl__input"
         placeholder="Search User"
-        type="Text"
+        type="search"
         value=""
       />
     </div>
