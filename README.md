@@ -27,8 +27,8 @@ Create a post-view app reader using React that provides a login page for the use
 * [x] Deployed [Visit app here](https://lucassenarj.github.io/supermetrics-react-assignment/)
 * [x] Github actions tests
 * [x] Automated release versions
-* [ ] Installable on desktop
-* [ ] Posts available offline
+* [x] Installable on desktop
+* [x] Posts available offline
 * [ ] End2end tests
 
 ---
