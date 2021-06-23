@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Article from "./../Article";
 import InputText from "./../InputText";
 import { FaSearch, FaArrowUp, FaArrowDown } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { sortPostsByParameter } from "./../../utils/helpers";
-import { setArticleList } from "./../../store/actions";
 import "./index.scss";
 
 function Articles() {
+  const [posts, setPosts] = useState([]);
+  const [active, setActive] = useState("ASC");
   const { articles } = useSelector(store => store.articles);
-  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    setPosts(articles);
+  }, [articles]);
 
-  const handleSort = type => {
-    const posts = sortPostsByParameter(articles, type);
-    dispatch(setArticleList(posts));
+  const handleSearch = ({ target: { value} }) => {
+    if (value.trim() ===  "") {
+      setPosts(articles);
+      return;
+    }
+
+    const filtered = posts.filter(({ message }) => message.includes(value));
+    setPosts(filtered);
+  }
+
+  const handleSort = (type) => {
+    const sorted = sortPostsByParameter(posts, type);
+    setPosts(sorted);
+    setActive(type);
   };
 
   return (
@@ -22,22 +37,22 @@ function Articles() {
         <div className="articles__buttons">
           <button
             onClick={() => handleSort("ASC")}
-            className="articles__buttons__btn"
+            className={["articles__buttons__btn", active === "ASC" ? "articles__buttons__btn--active" : ""].join(" ")}
             type="button"
             title="Most recent"
             data-testid="order-asc"
           >
-            <FaArrowUp />
+            <FaArrowDown />
           </button>
 
           <button
             onClick={() => handleSort("DESC")}
-            className="articles__buttons__btn"
+            className={["articles__buttons__btn", active === "DESC" ? "articles__buttons__btn--active" : ""].join(" ")}
             type="button"
-            tytle="Oldest"
+            title="Oldest"
             data-testid="order-desc"
-          >
-            <FaArrowDown />
+            >
+            <FaArrowUp />
           </button>
         </div>
 
@@ -45,12 +60,13 @@ function Articles() {
           <InputText
             icon={<FaSearch />}
             placeholder="Search Posts"
-            type="Text"
+            type="search"
+            onChange={handleSearch}
           />
         </div>
       </div>
-      { articles.length === 0 && (<span>No Articles to show</span>) }
-      { articles.map(({created_time, id, message}) => (
+      { posts.length === 0 && (<p>No article founded</p>) }
+      { posts.map(({created_time, id, message}) => (
         <Article
           key={id}
           date={created_time}

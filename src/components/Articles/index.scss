@@ -18,6 +18,10 @@
   cursor: pointer;
 }
 
+.articles__buttons__btn--active {
+  background-color: $button__active;
+}
+
 .articles__buttons__btn:hover {
   background-color: $button__hover;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import configureStore from "redux-mock-store";
 import { render, fireEvent } from "@testing-library/react";
 import * as redux from "react-redux";
@@ -12,6 +12,7 @@ describe("Components", () => {
     let wrapper;
     let store;
     const dispatch = jest.fn();
+    const handleSort = jest.fn();
   
     beforeEach(() => {
       store = mockStore({
@@ -24,7 +25,7 @@ describe("Components", () => {
 
       wrapper = render(
         <redux.Provider store={store}>
-          <Articles />
+          <Articles onClick={handleSort} />
         </redux.Provider>
       );
     });
@@ -33,20 +34,20 @@ describe("Components", () => {
       expect(container.firstChild).toMatchSnapshot();
     });
 
-    it("should click button order-asc button", () => {
+    it("should click button order-asc button", async () => {
       const { getByTestId } = wrapper;
-      fireEvent.click(getByTestId("order-asc"));
+      const button = getByTestId("order-asc");
+      fireEvent.click(button);
 
-      expect(redux.useDispatch).toHaveBeenCalled();
-      expect(redux.useDispatch).toHaveBeenCalledTimes(1);
+      expect(button).toHaveClass("articles__buttons__btn--active");
     });
 
     it("should click button order-desc button", () => {
       const { getByTestId } = wrapper;
-      fireEvent.click(getByTestId("order-desc"));
+      const button = getByTestId("order-desc");
+      fireEvent.click(button);
 
-      expect(redux.useDispatch).toHaveBeenCalled();
-      expect(redux.useDispatch).toHaveBeenCalledTimes(1);
+      expect(button).toHaveClass("articles__buttons__btn--active");
     });
   });
 });

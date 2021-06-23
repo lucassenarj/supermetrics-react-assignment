@@ -27,12 +27,12 @@ export function groupPostByUsers(data){
 
 export function sortPostsByParameter(posts, parameter = "ASC") {
   if (parameter === "ASC") {
-    return posts.sort((a, b) => {
+    return posts.slice().sort((a, b) => {
       return new Date(b.created_time) - new Date(a.created_time);
     });
   }
 
-  return posts.sort((a, b) => {
+  return posts.slice().sort((a, b) => {
     return new Date(a.created_time) - new Date(b.created_time);
   });
 }
