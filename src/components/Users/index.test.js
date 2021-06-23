@@ -3,6 +3,7 @@ import configureStore from "redux-mock-store";
 import { render, fireEvent } from "@testing-library/react";
 import * as redux from "react-redux";
 import { users } from "./../../utils/mocks/users";
+import { MemoryRouter } from "react-router";
 import Users from "./";
 
 const mockStore = configureStore([]);
@@ -24,7 +25,9 @@ describe("Components", () => {
 
       wrapper = render(
         <redux.Provider store={store}>
-          <Users users={users} />
+          <MemoryRouter>
+            <Users users={users} />
+          </MemoryRouter>
         </redux.Provider>
       );
     });

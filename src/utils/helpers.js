@@ -66,3 +66,7 @@ export function formatDate(string) {
   };
   return new Intl.DateTimeFormat("en", options).format(date);
 }
+
+export function generateSlug(text) {
+  return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+}

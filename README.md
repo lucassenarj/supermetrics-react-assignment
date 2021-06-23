@@ -22,7 +22,7 @@ Create a post-view app reader using React that provides a login page for the use
 ## Extra features (in progress)
 * [x] Search box for senders
 * [x] Searchbox for posts
-* [ ] Deep-linkable post list
+* [x] Deep-linkable post list
 * [x] Dockerfile and docker-compose
 * [x] Deployed [Visit app here](https://lucassenarj.github.io/supermetrics-react-assignment/)
 * [x] Github actions tests
