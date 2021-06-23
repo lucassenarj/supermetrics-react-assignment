@@ -6,3 +6,9 @@
   max-width: 1280px;
   padding: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .dashboard__content {
+    grid-template-columns: 1fr;
+  }
+}
